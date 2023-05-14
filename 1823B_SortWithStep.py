@@ -30,7 +30,7 @@ def can_sort_permutation(test_cases):
             else:
                 results.append(-1)
 
-    return [*results]
+    return results
 
 # Example usage:
 #t = 6
@@ -51,4 +51,4 @@ for i in range(int(n)):
     t.append(temp)
     test_cases.append(tuple(t))
 
-print(can_sort_permutation(test_cases))
+print(*can_sort_permutation(test_cases))
