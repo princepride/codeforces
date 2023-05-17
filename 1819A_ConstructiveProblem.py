@@ -14,8 +14,6 @@ for _ in range(int(input())):
     n = int(input())
     arr = list(map(int, input().split(' ')))
     m = find_missing_number(arr)
-    #print('m '+str(m))
-
     min_index = -1
     max_index = -1
     for index, num in enumerate(arr):
@@ -24,10 +22,11 @@ for _ in range(int(input())):
                 min_index = index
             else:
                 max_index = index
-    #print('min_index '+str(min_index))
-    #print('max_index '+str(max_index))
     if min_index == -1:
-        print('no')
+        if len(arr) == len(set(arr)):
+            print('no')
+        else:
+            print('yes')
     elif max_index == -1:
         print('yes')
     else:
